@@ -1,70 +1,58 @@
-# Getting Started with Create React App
+# User Management Web Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+This project is a simple web application that allows users to view, add, edit, and delete user details. It uses JSONPlaceholder as a mock backend API for demonstration purposes.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- **View Users**: Display a list of users with details such as ID, First Name, Last Name, Email, and Department.
+- **Add User**: Add a new user with validation for user input.
+- **Edit User**: Edit details of an existing user.
+- **Delete User**: Remove a user from the list.
+- **Pagination**: Navigate through pages of users.
+- **Notifications**: Display notifications for user actions (add, edit, delete).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Tech Stack
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Frontend**: React.js, Redux, Tailwind CSS
+- **Backend**: JSONPlaceholder (mock API)
+- **State Management**: Redux Toolkit
+- **Routing**: React Router
+- **Notifications**: React-Toastify
 
-### `npm test`
+## Usage
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Home Page
 
-### `npm run build`
+- Displays a list of users with pagination controls.
+- You can navigate to the Add User page or use the Edit and Delete buttons for each user.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Add User Page
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Fill in the form with user details (First Name, Last Name, Email, Department) and submit to add a new user.
+- Validation errors are displayed for invalid inputs.
+- The Cancel button redirects to the home page without saving changes.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Edit User Page
 
-### `npm run eject`
+- Edit details of an existing user.
+- The form is pre-filled with the current user's information.
+- After editing, the changes are saved, and the user is redirected to the home page.
+- The Cancel button redirects to the home page without saving changes.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Error Handling
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Network Errors: Notifications are displayed if API requests fail.
+- Validation Errors: Form validation errors are shown on the Add and Edit User pages.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Bonus Features
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Pagination: Allows users to navigate through pages of users.
+- Responsive Design: The interface adapts to various screen sizes.
+- Client-Side Validation: Ensures user input is valid before submission.
 
-## Learn More
+### Assumptions
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- The JSONPlaceholder API is used as a mock service and does not persist data.
+- The application is designed to work in modern browsers.
